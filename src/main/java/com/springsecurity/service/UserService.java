@@ -35,7 +35,6 @@ public class UserService {
     public User updateUser(User updatedUser) {
         User oldUser = this.userList.stream().filter((user) -> user.getUserId().equalsIgnoreCase(updatedUser.getUserId())).findAny().get();
 
-        oldUser.setUserId(updatedUser.getUserId());
         oldUser.setUserName(updatedUser.getUserName());
         oldUser.setFirstName(updatedUser.getFirstName());
         oldUser.setLastName(updatedUser.getLastName());
